@@ -1,0 +1,15 @@
+.AditionalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  padding-left: 0;
+  margin-bottom: 20px;
+
+  box-shadow: 0 0 2px 2px rgb(65, 64, 64, 0.5),
+    0 0 2px -2px rgba(65, 64, 64, 0.5);
+}
+
+.aditionLink {
+  margin-left: 40px;
+}

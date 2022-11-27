@@ -1,0 +1,15 @@
+.searchInput {
+  width: 20%;
+  height: 20px;
+  border-color: rgb(228, 61, 49);
+  outline: none;
+}
+
+.searchButton {
+  display: inline-block;
+  height: 26px;
+  background-color: rgb(228, 61, 49);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

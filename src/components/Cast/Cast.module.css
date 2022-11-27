@@ -1,0 +1,11 @@
+.actorCard {
+  width: 150px;
+}
+
+.actorsList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 23px;
+  margin-left: 23px;
+}

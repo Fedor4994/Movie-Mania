@@ -1,0 +1,27 @@
+.navigation {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 25px;
+  box-shadow: 0 2px 5px 0px #333;
+  margin-bottom: 20px;
+}
+.navigationLink {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+}
+
+.navigationLink:hover {
+  text-decoration: underline;
+}
+
+.activeNavigationLink {
+  text-decoration: none;
+  font-size: 22px;
+  color: rgb(228, 61, 49);
+}
+
+.activeNavigationLink:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,6 @@
+.trendingMovies {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 25px;
+}

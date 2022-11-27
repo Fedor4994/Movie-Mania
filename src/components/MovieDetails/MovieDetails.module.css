@@ -1,0 +1,25 @@
+.moviePoster {
+  width: 300px;
+}
+
+.movieContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.movieInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+}
+
+.movieTitle {
+  font-size: 30px;
+}
+
+.movieText {
+  font-size: 20px;
+}
