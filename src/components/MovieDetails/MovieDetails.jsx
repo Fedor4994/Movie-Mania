@@ -32,8 +32,9 @@ const MovieDetails = () => {
             film.title
           } (${film.release_date.slice(0, 4)})`}</h2>
           <p className={s.movieText}>
-            {film.vote_average &&
-              `User score: ${parseInt(film.vote_average * 10)}%`}
+            {`User score: ${
+              film.vote_average && parseInt(film.vote_average * 10)
+            }%`}
           </p>
           <h3 className={s.movieText}>{film.overview && 'Overview'}</h3>
           <p className={s.movieText}>{film.overview}</p>
