@@ -7,10 +7,25 @@ const Cast = () => {
   const [actors, setActors] = useState([]);
   const { movieId } = useParams();
 
-  useEffect(() => {
-    fetchActorsByMovieId(Number(movieId)).then(data => {
-      setActors(data.cast);
+  const addAutoScroll = () => {
+    const cardHeight = 140;
+
+    window.scrollBy({
+      top: cardHeight * 2,
+      behavior: 'smooth',
     });
+  };
+
+  useEffect(() => {
+    fetchActorsByMovieId(Number(movieId))
+      .then(data => {
+        setActors(data.cast);
+      })
+      .finally(() => {
+        setTimeout(() => {
+          addAutoScroll();
+        }, 100);
+      });
   }, [movieId]);
   return (
     <ul className={s.actorsList}>

@@ -11,5 +11,10 @@
 }
 
 .aditionLink {
+  font-size: 18px;
   margin-left: 40px;
+}
+
+.activeAditionalLink {
+  color: rgb(228, 61, 49);
 }

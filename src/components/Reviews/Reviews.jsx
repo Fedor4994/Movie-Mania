@@ -7,10 +7,25 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const { movieId } = useParams();
 
-  useEffect(() => {
-    fetchReviewsByMovieId(Number(movieId)).then(data => {
-      setReviews(data.results);
+  const addAutoScroll = () => {
+    const cardHeight = 140;
+
+    window.scrollBy({
+      top: cardHeight * 2,
+      behavior: 'smooth',
     });
+  };
+
+  useEffect(() => {
+    fetchReviewsByMovieId(Number(movieId))
+      .then(data => {
+        setReviews(data.results);
+      })
+      .finally(() => {
+        setTimeout(() => {
+          addAutoScroll();
+        }, 100);
+      });
   }, [movieId]);
   return (
     <ul className={s.reviewsList}>

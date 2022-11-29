@@ -1,23 +1,33 @@
 import React from 'react';
 import s from './AditionalInfo.module.css';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const AditionalInfo = () => {
   const location = useLocation();
+
+  const setClassName = ({ isActive }) => isActive && s.activeAditionalLink;
 
   return (
     <div className={s.AditionalInfo}>
       <p>Aditional Info</p>
       <ul>
         <li className={s.aditionLink}>
-          <Link state={{ from: location.state?.from ?? '/' }} to="cast">
+          <NavLink
+            className={setClassName}
+            state={{ from: location.state?.from ?? '/' }}
+            to="cast"
+          >
             Cast
-          </Link>
+          </NavLink>
         </li>
         <li className={s.aditionLink}>
-          <Link state={{ from: location.state?.from ?? '/' }} to="reviews">
+          <NavLink
+            className={setClassName}
+            state={{ from: location.state?.from ?? '/' }}
+            to="reviews"
+          >
             Reviews
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </div>
