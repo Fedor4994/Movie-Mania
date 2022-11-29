@@ -1,8 +1,9 @@
 import { fetchMoviesByQuery } from 'fetchData';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import s from './SearchMovies.module.css';
+import MoivesList from 'components/MoivesList/MoivesList';
 
 const SearchMovies = () => {
   const [query, setQuery] = useState('');
@@ -52,18 +53,7 @@ const SearchMovies = () => {
         </button>
       </form>
 
-      {movieName && (
-        <ul className={s.foundFilms}>
-          {foundMovies.map(
-            film =>
-              film.title && (
-                <li key={film.id}>
-                  <Link to={`/movies/${film.id}`}>{film.title}</Link>
-                </li>
-              )
-          )}
-        </ul>
-      )}
+      {movieName && <MoivesList movies={foundMovies} />}
     </>
   );
 };

@@ -2,6 +2,10 @@
   width: 300px;
 }
 
+.goback {
+  margin-bottom: 20px;
+}
+
 .movieContainer {
   display: flex;
   gap: 20px;
