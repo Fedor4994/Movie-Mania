@@ -5,7 +5,8 @@ import { NavLink, useLocation } from 'react-router-dom';
 const AditionalInfo = () => {
   const location = useLocation();
 
-  const setClassName = ({ isActive }) => isActive && s.activeAditionalLink;
+  const setClassName = ({ isActive }) =>
+    isActive ? s.activeAditionalLink : '';
 
   return (
     <div className={s.AditionalInfo}>
