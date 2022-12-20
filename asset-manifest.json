@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-router-filmoteka/static/css/main.205f7e6d.css",
-    "main.js": "/react-router-filmoteka/static/js/main.39c1ebaa.js",
+    "main.js": "/react-router-filmoteka/static/js/main.04a03c46.js",
     "static/css/654.986b61cd.chunk.css": "/react-router-filmoteka/static/css/654.986b61cd.chunk.css",
     "static/js/654.bc91228a.chunk.js": "/react-router-filmoteka/static/js/654.bc91228a.chunk.js",
     "static/css/108.9c271bc5.chunk.css": "/react-router-filmoteka/static/css/108.9c271bc5.chunk.css",
@@ -15,7 +15,7 @@
     "static/js/284.52eeedab.chunk.js": "/react-router-filmoteka/static/js/284.52eeedab.chunk.js",
     "index.html": "/react-router-filmoteka/index.html",
     "main.205f7e6d.css.map": "/react-router-filmoteka/static/css/main.205f7e6d.css.map",
-    "main.39c1ebaa.js.map": "/react-router-filmoteka/static/js/main.39c1ebaa.js.map",
+    "main.04a03c46.js.map": "/react-router-filmoteka/static/js/main.04a03c46.js.map",
     "654.986b61cd.chunk.css.map": "/react-router-filmoteka/static/css/654.986b61cd.chunk.css.map",
     "654.bc91228a.chunk.js.map": "/react-router-filmoteka/static/js/654.bc91228a.chunk.js.map",
     "108.9c271bc5.chunk.css.map": "/react-router-filmoteka/static/css/108.9c271bc5.chunk.css.map",
@@ -30,6 +30,6 @@
   },
   "entrypoints": [
     "static/css/main.205f7e6d.css",
-    "static/js/main.39c1ebaa.js"
+    "static/js/main.04a03c46.js"
   ]
 }
