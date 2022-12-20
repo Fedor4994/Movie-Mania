@@ -1,11 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-// import Home from 'views/Home';
-// import Movie from 'views/Movie';
-// import Movies from 'views/Movies';
-// import Cast from './Cast/Cast';
 import Navigation from './Navigation/Navigation';
-// import Reviews from './Reviews/Reviews';
 
 export const App = () => {
   const Home = lazy(() => import('views/Home'));
