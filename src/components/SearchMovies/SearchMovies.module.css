@@ -1,8 +1,22 @@
 .searchInput {
-  width: 20%;
-  height: 20px;
-  border-color: rgb(228, 61, 49);
+  font-size: 16px;
   outline: none;
+  height: 30px;
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.233);
+  color: #fff;
+  width: 95%;
+  background-image: url('./search.png');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 25px;
+  margin: 0;
+  display: block;
+  padding: 5px 10px;
 }
 
 .searchButton {

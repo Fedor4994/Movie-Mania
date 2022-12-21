@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import s from './Navigation.module.css';
+import { MdLocalFireDepartment } from 'react-icons/md';
+import { BiSearchAlt } from 'react-icons/bi';
 
 const Navigation = () => {
   const setClassName = ({ isActive }) =>
@@ -9,10 +11,12 @@ const Navigation = () => {
   return (
     <nav className={s.navigation}>
       <NavLink className={setClassName} to="/">
-        Home
+        <MdLocalFireDepartment />
+        Trending
       </NavLink>
       <NavLink className={setClassName} to="/movies">
-        Movies
+        <BiSearchAlt />
+        Search
       </NavLink>
     </nav>
   );

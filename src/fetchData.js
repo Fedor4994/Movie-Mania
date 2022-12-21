@@ -2,7 +2,7 @@ const KEY = 'abf5df7d75a67bd02b3b1e4ead1fc14d';
 
 export async function fetchPopularForToday() {
   const response = await fetch(
-    `https://api.themoviedb.org/3/trending/all/day?api_key=${KEY}`
+    `https://api.themoviedb.org/3/trending/movie/day?api_key=${KEY}`
   );
 
   const data = await response.json();

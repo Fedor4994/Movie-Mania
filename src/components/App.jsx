@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-import Navigation from './Navigation/Navigation';
+
+import Layout from 'views/Layout/Layout';
 
 export const App = () => {
   const Home = lazy(() => import('views/Home'));
@@ -10,18 +11,24 @@ export const App = () => {
   const Reviews = lazy(() => import('./Reviews/Reviews'));
 
   return (
-    <div>
-      <Navigation />
-
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
+      }}
+    >
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/movies/:movieId" element={<Movie />}>
-            <Route path="cast" element={<Cast />} />
-            <Route path="reviews" element={<Reviews />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="movies" element={<Movies />} />
+            <Route path="movies/:movieId" element={<Movie />}>
+              <Route path="cast" element={<Cast />} />
+              <Route path="reviews" element={<Reviews />} />
+            </Route>
+            <Route path="*" element={<Home />}></Route>
           </Route>
-          <Route path="*" element={<Home />}></Route>
         </Routes>
       </Suspense>
     </div>

@@ -43,14 +43,12 @@ const SearchMovies = () => {
     <>
       <form onSubmit={handleSubmit}>
         <input
+          placeholder="Search..."
           className={s.searchInput}
           onChange={handleInput}
           type="text"
           value={query}
         />
-        <button className={s.searchButton} type="submit">
-          Search
-        </button>
       </form>
 
       {movieName && <MoivesList movies={foundMovies} />}

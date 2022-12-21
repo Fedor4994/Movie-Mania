@@ -2,14 +2,17 @@
   display: flex;
   gap: 15px;
   align-items: center;
-  padding: 25px;
-  box-shadow: 0 2px 5px 0px #333;
-  margin-bottom: 20px;
+  justify-content: space-around;
+  padding: 5px;
 }
 .navigationLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  color: black;
-  font-size: 22px;
+  color: #fff;
+  font-size: 18px;
 }
 
 .navigationLink:hover {
@@ -17,11 +20,15 @@
 }
 
 .activeNavigationLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 18px;
   color: rgb(228, 61, 49);
 }
 
-.activeNavigationLink:hover {
+/* .activeNavigationLink:hover {
   text-decoration: underline;
-}
+} */
