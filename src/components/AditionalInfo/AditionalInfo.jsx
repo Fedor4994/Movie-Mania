@@ -6,13 +6,12 @@ const AditionalInfo = () => {
   const location = useLocation();
 
   const setClassName = ({ isActive }) =>
-    isActive ? s.activeAditionalLink : '';
+    isActive ? s.activeAditionalLink : s.aditionLink;
 
   return (
     <div className={s.AditionalInfo}>
-      <p>Aditional Info</p>
-      <ul>
-        <li className={s.aditionLink}>
+      <ul className={s.aditionList}>
+        <li className={s.aditionItem}>
           <NavLink
             className={setClassName}
             state={{ from: location.state?.from ?? '/' }}
@@ -21,7 +20,7 @@ const AditionalInfo = () => {
             Cast
           </NavLink>
         </li>
-        <li className={s.aditionLink}>
+        <li className={s.aditionItem}>
           <NavLink
             className={setClassName}
             state={{ from: location.state?.from ?? '/' }}

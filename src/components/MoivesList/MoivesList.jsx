@@ -23,7 +23,7 @@ const MoivesList = ({ movies }) => {
                 />
 
                 {film.title && (
-                  <p className={s.movieName}>{film.title.slice(0, 43)}</p>
+                  <p className={s.movieName}>{film.title.slice(0, 33)}</p>
                 )}
                 <div className={s.movieCardWrapper}>
                   {film.release_date && <p>{film.release_date.slice(0, 4)}</p>}

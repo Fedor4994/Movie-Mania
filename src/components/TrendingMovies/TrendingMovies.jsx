@@ -15,7 +15,7 @@ const TrendingMovies = () => {
   }, []);
 
   return (
-    <div>
+    <div className={s.trendingMovies}>
       <h1 className={s.trendingTitle}>Trending today</h1>
       <MoivesList movies={popularFilms} />
     </div>
