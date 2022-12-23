@@ -5,11 +5,12 @@ import s from './Layout.module.css';
 
 const Layout = () => {
   let width = window.innerWidth;
+
   return (
     <>
       <div className={s.content}>
         <header className={s.header}>
-          <NavLink className={s.logo} to="/" />
+          <NavLink className={s.logo} to={`/${1}`} />
           {width > 1279 && <Navigation />}
         </header>
         <main className={s.main}>

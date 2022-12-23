@@ -1,10 +1,12 @@
 import { fetchReviewsByMovieId } from 'fetchData';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { ThreeDots } from 'react-loader-spinner';
 import s from './Reviews.module.css';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
 
   const addAutoScroll = () => {
@@ -17,9 +19,12 @@ const Reviews = () => {
   };
 
   useEffect(() => {
+    setIsLoading(true);
+
     fetchReviewsByMovieId(Number(movieId))
       .then(data => {
         setReviews(data.results);
+        setIsLoading(false);
       })
       .finally(() => {
         setTimeout(() => {
@@ -27,7 +32,20 @@ const Reviews = () => {
         }, 100);
       });
   }, [movieId]);
-  return (
+  return isLoading ? (
+    <div className={s.loader}>
+      <ThreeDots
+        height="80"
+        width="80"
+        radius="9"
+        color="#ccc"
+        ariaLabel="three-dots-loading"
+        wrapperStyle={{}}
+        wrapperClassName=""
+        visible={true}
+      />
+    </div>
+  ) : (
     <ul className={s.reviewsList}>
       {reviews.length !== 0 ? (
         reviews.map(review => (

@@ -1,8 +1,8 @@
 const KEY = 'abf5df7d75a67bd02b3b1e4ead1fc14d';
 
-export async function fetchPopularForToday() {
+export async function fetchPopularForToday(page) {
   const response = await fetch(
-    `https://api.themoviedb.org/3/trending/movie/day?api_key=${KEY}`
+    `https://api.themoviedb.org/3/trending/movie/day?api_key=${KEY}&page=${page}`
   );
 
   const data = await response.json();
@@ -34,9 +34,9 @@ export async function fetchReviewsByMovieId(movieId) {
   return data;
 }
 
-export async function fetchMoviesByQuery(query) {
+export async function fetchMoviesByQuery(query, page) {
   const response = await fetch(
-    `https://api.themoviedb.org/3/search/movie?api_key=${KEY}&query=${query}`
+    `https://api.themoviedb.org/3/search/movie?api_key=${KEY}&query=${query}&page=${page}`
   );
   const data = await response.json();
   return data;

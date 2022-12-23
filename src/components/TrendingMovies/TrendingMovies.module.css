@@ -4,8 +4,20 @@
   color: #39445a;
 }
 
+.page {
+  color: #fff;
+}
+
 .trendingMovies {
   padding: 10px 30px;
+}
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 1280px) {

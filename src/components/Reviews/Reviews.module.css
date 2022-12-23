@@ -10,3 +10,12 @@
 .reviewItem {
   width: 80%;
 }
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}

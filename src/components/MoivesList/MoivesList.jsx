@@ -17,11 +17,15 @@ const MoivesList = ({ movies }) => {
                 to={`/movies/${film.id}`}
                 state={{ from: location }}
               >
-                <img
-                  className={s.movieCardImage}
-                  src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
-                  alt=""
-                />
+                {film.poster_path ? (
+                  <img
+                    className={s.movieCardImage}
+                    src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
+                    alt={film.title}
+                  />
+                ) : (
+                  <div className={s.noImg}></div>
+                )}
 
                 {film.title && (
                   <p className={s.movieName}>{film.title.slice(0, 33)}</p>

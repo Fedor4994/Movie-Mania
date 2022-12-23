@@ -1,0 +1,55 @@
+.page {
+  text-align: center;
+  color: #000;
+  width: 30px;
+  height: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #fff;
+  color: #39445a;
+  border-radius: 50%;
+}
+
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 45px;
+
+  margin-top: 25px;
+  background-color: #39445a;
+  border-radius: 50px;
+}
+
+.changePage {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: #fff;
+  color: #39445a;
+}
+.changePage:hover {
+  scale: 1.1;
+}
+
+@media screen and (min-width: 768px) {
+  .pagination {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .pagination {
+    width: 15%;
+  }
+}
