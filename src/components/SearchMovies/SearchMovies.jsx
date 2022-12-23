@@ -41,7 +41,7 @@ const SearchMovies = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className={s.searchForm} onSubmit={handleSubmit}>
         <input
           placeholder="Search..."
           className={s.searchInput}

@@ -1,11 +1,42 @@
 .actorCard {
-  width: 150px;
+  width: 40%;
+  min-height: 255px;
+  /* height: 265px; */
+  background-color: #0f0f0f;
+  padding: 7px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.actorPhoto {
+  border-radius: 10px;
 }
 
 .actorsList {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  gap: 23px;
-  margin-left: 23px;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.actorDesc {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .actorCard {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .actorCard {
+    width: 15%;
+    font-size: 20px;
+  }
 }

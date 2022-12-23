@@ -19,11 +19,23 @@
   padding: 5px 10px;
 }
 
-.searchButton {
-  display: inline-block;
-  height: 26px;
-  background-color: rgb(228, 61, 49);
-  color: #fff;
-  border: none;
-  cursor: pointer;
+.searchForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .searchInput {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .searchInput {
+    width: 35%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
 }

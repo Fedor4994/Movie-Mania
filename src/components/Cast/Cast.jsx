@@ -8,7 +8,7 @@ const Cast = () => {
   const { movieId } = useParams();
 
   const addAutoScroll = () => {
-    const cardHeight = 140;
+    const cardHeight = 220;
 
     window.scrollBy({
       top: cardHeight * 2,
@@ -38,8 +38,10 @@ const Cast = () => {
                 src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
                 alt={actor.name}
               />
-              <p>{actor.name}</p>
-              <p>{actor.character}</p>
+              <div className={s.actorDesc}>
+                <p>{actor.name}</p>
+                <p>{actor.character}</p>
+              </div>
             </li>
           )
       )}

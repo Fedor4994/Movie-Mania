@@ -33,7 +33,7 @@
 .aditionList {
   width: 100%;
   display: flex;
-  flex-direction: column;
+
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -49,4 +49,13 @@
 
   font-size: 24px;
   color: #3f51b5 !important;
+}
+
+@media screen and (min-width: 1280px) {
+  .aditionLink {
+    width: 60%;
+  }
+  .activeAditionalLink {
+    width: 60%;
+  }
 }

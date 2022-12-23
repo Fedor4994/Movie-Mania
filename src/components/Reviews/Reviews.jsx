@@ -31,7 +31,7 @@ const Reviews = () => {
     <ul className={s.reviewsList}>
       {reviews.length !== 0 ? (
         reviews.map(review => (
-          <li key={review.id}>
+          <li className={s.reviewItem} key={review.id}>
             <h2>{review.author}</h2>
             <p>{review.content}</p>
           </li>

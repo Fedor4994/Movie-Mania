@@ -46,9 +46,12 @@ const MovieDetails = () => {
           }}
           className={s.movieContainer}
         >
-          <button className={s.goback} type="button" onClick={goBack}>
-            <ImReply /> Go back
-          </button>
+          <div className={s.buttonContainer}>
+            <button className={s.goback} type="button" onClick={goBack}>
+              <ImReply /> Go back
+            </button>
+          </div>
+
           <div className={s.movieContent}>
             <img
               className={s.moviePoster}
@@ -65,12 +68,15 @@ const MovieDetails = () => {
                   film.vote_average && parseInt(film.vote_average * 10)
                 }%`}
               </p>
-              <h3 className={s.movieText}>{film.overview && 'Overview'}</h3>
-              <p className={s.movieText}>{film.overview}</p>
-              <h3 className={s.movieText}>
-                {getGeners(film.genres) && 'Genres'}
+              <h3 className={s.movieSubTitle}>
+                {film.overview && 'Overview'}{' '}
+                <p className={s.movieText}>{film.overview}</p>
               </h3>
-              <p className={s.movieText}>{getGeners(film.genres)}</p>
+
+              <h3 className={s.movieSubTitle}>
+                {getGeners(film.genres) && 'Genres'}
+                <p className={s.movieText}>{getGeners(film.genres)}</p>
+              </h3>
             </div>
           </div>
         </div>

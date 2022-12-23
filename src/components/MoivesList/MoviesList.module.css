@@ -1,12 +1,13 @@
 .movies {
   display: flex;
   flex-wrap: wrap;
-
-  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .movieItem {
-  width: 49%;
+  width: 48%;
 }
 
 .movieCard {
@@ -28,8 +29,11 @@
 .vote {
   background-color: #3f51b5;
   border-radius: 10px;
-  width: 30px;
-  text-align: center;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
 }
 
 .movieName {
@@ -42,7 +46,7 @@
   margin-top: auto;
   font-size: 14px;
   color: #ccc;
-  gap: 55px;
+  gap: 45px;
 }
 
 .movieCardImage {
@@ -50,4 +54,57 @@
   width: 95%;
   height: 200px;
   object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .movies {
+    gap: 15px;
+  }
+  .movieItem {
+    width: 30%;
+  }
+
+  .movieCard {
+    height: 375px;
+    font-size: 18px;
+  }
+  .movieCardImage {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .movies {
+    gap: 20px;
+  }
+  .movieItem {
+    width: 18%;
+  }
+
+  .movieCard:hover {
+    scale: 1.05;
+    background-color: rgba(255, 255, 255, 0.836);
+  }
+
+  .movieCard:hover .movieName {
+    color: #000;
+  }
+  .movieCard:hover .movieCardWrapper {
+    color: #000;
+  }
+
+  .movieCard {
+    height: 475px;
+    font-size: 20px;
+  }
+  .movieCardImage {
+    height: 400px;
+  }
+
+  .movieCardWrapper {
+    font-size: 18px;
+  }
+  .vote {
+    width: 50px;
+  }
 }

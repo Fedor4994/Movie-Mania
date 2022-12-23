@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './MoviesList.module.css';
 import { Link, useLocation } from 'react-router-dom';
+import { AiFillStar } from 'react-icons/ai';
 
 const MoivesList = ({ movies }) => {
   const location = useLocation();
@@ -28,7 +29,9 @@ const MoivesList = ({ movies }) => {
                 <div className={s.movieCardWrapper}>
                   {film.release_date && <p>{film.release_date.slice(0, 4)}</p>}
                   {film.vote_average && (
-                    <p className={s.vote}>{film.vote_average.toFixed(1)}</p>
+                    <p className={s.vote}>
+                      <AiFillStar size={10} /> {film.vote_average.toFixed(1)}
+                    </p>
                   )}
                 </div>
               </Link>
