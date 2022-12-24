@@ -1,15 +1,18 @@
 import React from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
-import { fetchFilmById } from 'fetchData';
+import { fetchFilmById, fetchTrailerByMovieId } from 'fetchData';
 import { useState, useEffect } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
+import FsLightbox from 'fslightbox-react';
 import s from './MovieDetails.module.css';
 import { ImReply } from 'react-icons/im';
+import { AiFillYoutube } from 'react-icons/ai';
 
 const MovieDetails = () => {
   const location = useLocation() || '';
   const [isLoading, setIsLoading] = useState(false);
-
+  const [toggler, setToggler] = useState(false);
+  const [trailerLink, setTrailerLink] = useState(['']);
   const navigate = useNavigate();
 
   const [film, setFilm] = useState(null);
@@ -18,6 +21,24 @@ const MovieDetails = () => {
   const getGeners = genresArr => {
     const geners = genresArr.map(genre => genre.name).join(', ');
     return geners;
+  };
+
+  const trailerHandler = async id => {
+    fetchTrailerByMovieId(id)
+      .then(data => {
+        const trailers = data.results.filter(film =>
+          film.name.includes('Trailer')
+        );
+        const trailersLinks = trailers.map(
+          video => `https://www.youtube.com/embed/${video.key}`
+        );
+        trailersLinks.length !== 0
+          ? setTrailerLink([...trailersLinks])
+          : setTrailerLink(['']);
+      })
+      .finally(() => {
+        setToggler(!toggler);
+      });
   };
 
   useEffect(() => {
@@ -99,6 +120,15 @@ const MovieDetails = () => {
                   {getGeners(film.genres) && 'Genres'}
                   <p className={s.movieText}>{getGeners(film.genres)}</p>
                 </h3>
+
+                <button
+                  className={s.trailerButton}
+                  onClick={() => trailerHandler(film.id)}
+                >
+                  <AiFillYoutube size={20} />
+                  WATCH TRAILERS
+                </button>
+                <FsLightbox toggler={toggler} sources={trailerLink} />
               </div>
             </div>
           </div>

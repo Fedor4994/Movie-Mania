@@ -41,3 +41,11 @@ export async function fetchMoviesByQuery(query, page) {
   const data = await response.json();
   return data;
 }
+
+export async function fetchTrailerByMovieId(movieId) {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=abf5df7d75a67bd02b3b1e4ead1fc14d`
+  );
+  const data = await response.json();
+  return data;
+}
