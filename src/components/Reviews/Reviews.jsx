@@ -51,7 +51,7 @@ const Reviews = () => {
         reviews.map(review => (
           <li className={s.reviewItem} key={review.id}>
             <h2>{review.author}</h2>
-            <p>{review.content}</p>
+            <p>{review.content.split('https')[0]}</p>
           </li>
         ))
       ) : (
